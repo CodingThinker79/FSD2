@@ -54,8 +54,91 @@ public class Main
 	}
 }
 *************************************
+//L002
+
+public class Main
+{
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 20;
+		int s = sum(a,b);
+		int multiply = mul(a,b);
+		int divide = div(a,b);
+		System.out.println(s);
+		System.out.println(multiply);
+		System.out.println(divide);
+		
+	}
+	public static int sum(int a, int b){
+	    int ans = a+b;
+	    return ans;
+	}
+	public static int multiply(int a, int b){
+	    int ans = a*b;
+	    return ans;
+	}
+	public static int divide(int a, int b){
+	    int ans = a/b;
+	    return ans;
+	}
+}
+
+//find element in an array
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		 Scanner scn = new Scanner(System.in);
+		 int n = scn.nextInt();
+		 int[] arr = new int[n];
+		 for(int i = 0; i<n; i++){
+		     arr[i] = scn.nextInt();
+		 }
+		 int x = scn.nextInt();
+		 int ans = find(arr , x);
+		 System.out.println(ans);
+		
+	}
+	public static int find(int[] arr, int x){
+	    int ans = -1;
+	    for(int i = 0; i<arr.length; i++){
+	        if(arr[i] == x){
+	            ans = i;
+	            break;
+	        }
+	    }
+	    return ans;
+	}
+
+}
+
+
+*************************************
 //L003
 
+swap of two element in an array
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		 int[] arr = {10,20}
+		 System.out.println(arr[0] + " " + arr[1]);
+		 swap(arr);
+		 System.out.println(arr[0] + " " + arr[1]);
+		 
+	}
+	public static void swap(int[] arr, int x){
+	    int temp = arr[0];
+	    arr[0] = arr[1];
+	    arr[1] = temp;
+	}
+
+}
+
+
+
+
+//reverse of an array
 import java.util.*;
 public class Main
 {
