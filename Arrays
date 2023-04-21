@@ -172,3 +172,41 @@ public class Main
 	}
 }
 
+*************************
+//L003
+
+import java.util.*;
+public class Main
+{
+    public static int maxEle(int[] arr){
+        int max = arr[0];
+        for(int i =1; i<arr.length; i++){
+            int ele = arr[i];
+            if(ele > max){
+                max = ele;
+            }
+        }
+        return max;
+    }
+    
+	public static void main(String[] args) {
+		 int[] arr = {2,5,9,7,3,1,6};
+		 int max = maxEle(arr);
+		 while(max>=1){
+		     
+		     for(int j=0; j<arr.length; j++){
+		         int ele = arr[j];
+		         if(ele >= max){
+		             System.out.print("*");
+		         } else {
+		             System.out.print(" ");
+		         }
+		     }
+		     // next Line
+		     System.out.println();
+		     max--;
+		 }
+	}
+}
+
+
