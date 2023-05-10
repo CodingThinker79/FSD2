@@ -1,1 +1,37 @@
-
+class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> ans = new ArrayList<>();
+        int rmin = 0, rmax = matrix.length-1;
+        int cmin = 0, cmax = matrix[0].length-1;
+        int c = matrix.length * matrix[0].length;
+        while(c>0){
+            //L to R
+            for(int j = cmin; j<=cmax && c>0; j++){
+                ans.add(matrix[rmin][j]);
+                c--;
+            }
+            rmin++;
+            // T to B
+            for(int i = rmin; i<=rmax && c>0; i++){
+                ans.add(matrix[i][cmax]);
+                c--;
+            }
+            cmax--;
+            // R to L
+            for(int j = cmax; j>=cmin && c>0; j--){
+                ans.add(matrix[rmax][j]);
+                c--;
+            }
+            rmax--;
+            // B to T
+            for(int i = rmax; i>=rmin && c>0; i--){
+                ans.add(matrix[i][cmin]);
+                c--;
+            }
+            cmin++;
+            
+        }
+        return ans;
+        
+    }
+}
